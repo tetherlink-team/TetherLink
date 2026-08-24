@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TetherLink - C-Native Zero-Copy Mobile Gaming Bridge</title>
+  <title>TetherLink - Low-Latency Mobile Tethering Bridge for PC Gaming</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,20 +14,12 @@
       --bg-card-hover: #1A202C;
       --accent-green: #00FF66;
       --accent-cyan: #00E5FF;
-      --accent-purple: #8B5CF6;
       --text-main: #F7FAFC;
       --text-muted: #A0AEC0;
       --text-dim: #718096;
       --border-color: rgba(255, 255, 255, 0.08);
-      --border-glow: rgba(0, 255, 102, 0.25);
     }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background-color: var(--bg-dark);
@@ -35,311 +27,57 @@
       line-height: 1.6;
       overflow-x: hidden;
     }
-
-    .container {
-      max-width: 1140px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Ambient Glow */
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
     .glow-bg {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 1000px;
-      height: 500px;
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 1000px; height: 500px;
       background: radial-gradient(circle, rgba(0, 229, 255, 0.08) 0%, rgba(0, 255, 102, 0.04) 40%, rgba(11, 13, 17, 0) 70%);
-      pointer-events: none;
-      z-index: 0;
+      pointer-events: none; z-index: 0;
     }
-
-    /* Navigation */
-    header {
-      padding: 24px 0;
-      position: relative;
-      z-index: 10;
-      border-bottom: 1px solid var(--border-color);
-    }
-    .nav-wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.25rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      color: #FFF;
-      text-decoration: none;
-    }
-    .logo-badge {
-      font-size: 0.65rem;
-      font-weight: 700;
-      background: rgba(0, 255, 102, 0.15);
-      color: var(--accent-green);
-      padding: 2px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(0, 255, 102, 0.3);
-      text-transform: uppercase;
-    }
-
-    /* Hero Section */
-    .hero {
-      padding: 90px 0 60px;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(0, 229, 255, 0.08);
-      border: 1px solid rgba(0, 229, 255, 0.2);
-      padding: 6px 16px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--accent-cyan);
-      margin-bottom: 24px;
-    }
-    .hero h1 {
-      font-size: 3.25rem;
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
-    }
-    .hero h1 span.gradient {
-      background: linear-gradient(135deg, #00FF66 0%, #00E5FF 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 680px;
-      margin: 0 auto 36px;
-    }
-
-    .cta-group {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: #00FF66;
-      color: #0B0D11;
-      box-shadow: 0 4px 20px rgba(0, 255, 102, 0.3);
-    }
-    .btn-primary:hover {
-      background: #10FF70;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 25px rgba(0, 255, 102, 0.45);
-    }
-    .btn-secondary {
-      background: var(--bg-card);
-      color: var(--text-main);
-      border: 1px solid var(--border-color);
-    }
-    .btn-secondary:hover {
-      background: var(--bg-card-hover);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .sub-note {
-      font-size: 0.85rem;
-      color: var(--text-dim);
-      margin-top: 14px;
-    }
-
-    /* Benchmarks / Comparison Table */
-    .benchmarks {
-      padding: 60px 0;
-      position: relative;
-      z-index: 1;
-    }
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .section-title h2 {
-      font-size: 2rem;
-      font-weight: 800;
-      letter-spacing: -0.8px;
-      margin-bottom: 8px;
-    }
-    .section-title p {
-      color: var(--text-muted);
-      font-size: 1rem;
-    }
-
-    .table-container {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-    }
-    th, td {
-      padding: 18px 24px;
-      border-bottom: 1px solid var(--border-color);
-    }
-    th {
-      background: rgba(255, 255, 255, 0.02);
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--text-dim);
-    }
-    td {
-      font-size: 0.95rem;
-    }
-    .badge-win {
-      color: var(--accent-green);
-      font-weight: 700;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .badge-bad {
-      color: #FF4D4D;
-      font-weight: 500;
-    }
-
-    /* Features Grid */
-    .features {
-      padding: 60px 0;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-    }
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 30px;
-      transition: all 0.2s ease;
-    }
-    .card:hover {
-      border-color: rgba(0, 229, 255, 0.3);
-      transform: translateY(-3px);
-    }
-    .card-icon {
-      font-size: 1.8rem;
-      margin-bottom: 18px;
-      display: inline-block;
-    }
-    .card h3 {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    /* Pricing Section */
-    .pricing {
-      padding: 70px 0;
-      text-align: center;
-    }
-    .pricing-card {
-      max-width: 460px;
-      margin: 0 auto;
-      background: linear-gradient(180deg, #181E29 0%, #11141A 100%);
-      border: 1px solid rgba(0, 255, 102, 0.3);
-      border-radius: 16px;
-      padding: 40px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-      position: relative;
-    }
-    .pricing-badge {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, #00FF66 0%, #00E5FF 100%);
-      color: #0B0D11;
-      font-weight: 800;
-      font-size: 0.75rem;
-      padding: 4px 14px;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .price-num {
-      font-size: 3.2rem;
-      font-weight: 800;
-      color: #FFF;
-      margin: 16px 0 8px;
-    }
-    .price-num span {
-      font-size: 1.1rem;
-      color: var(--text-dim);
-      font-weight: 500;
-    }
-    .pricing-features {
-      list-style: none;
-      text-align: left;
-      margin: 28px 0;
-    }
-    .pricing-features li {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      font-size: 0.95rem;
-      color: var(--text-main);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .pricing-features li span.check {
-      color: var(--accent-green);
-      font-weight: 800;
-    }
-
-    /* Footer */
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding: 40px 0;
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.3rem; }
-      .hero p { font-size: 1rem; }
-      .grid-3 { grid-template-columns: 1fr; }
-    }
+    header { padding: 24px 0; position: relative; z-index: 10; border-bottom: 1px solid var(--border-color); }
+    .nav-wrap { display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 800; color: #FFF; text-decoration: none; }
+    .logo-badge { font-size: 0.65rem; font-weight: 700; background: rgba(0, 255, 102, 0.15); color: var(--accent-green); padding: 2px 8px; border-radius: 999px; border: 1px solid rgba(0, 255, 102, 0.3); text-transform: uppercase; }
+    .hero { padding: 90px 0 60px; text-align: center; position: relative; z-index: 1; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.2); padding: 6px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 600; color: var(--accent-cyan); margin-bottom: 24px; }
+    .hero h1 { font-size: 3.25rem; font-weight: 800; line-height: 1.15; letter-spacing: -1.5px; margin-bottom: 20px; }
+    .hero h1 span.gradient { background: linear-gradient(135deg, #00FF66 0%, #00E5FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 680px; margin: 0 auto 36px; }
+    .cta-group { display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-size: 1rem; font-weight: 700; padding: 14px 28px; border-radius: 8px; text-decoration: none; transition: all 0.2s ease; cursor: pointer; }
+    .btn-primary { background: #00FF66; color: #0B0D11; box-shadow: 0 4px 20px rgba(0, 255, 102, 0.3); }
+    .btn-primary:hover { background: #10FF70; transform: translateY(-2px); }
+    .btn-secondary { background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-color); }
+    .btn-secondary:hover { background: var(--bg-card-hover); border-color: rgba(255, 255, 255, 0.2); }
+    .sub-note { font-size: 0.85rem; color: var(--text-dim); margin-top: 14px; }
+    .benchmarks { padding: 60px 0; position: relative; z-index: 1; }
+    .section-title { text-align: center; margin-bottom: 40px; }
+    .section-title h2 { font-size: 2rem; font-weight: 800; letter-spacing: -0.8px; margin-bottom: 8px; }
+    .section-title p { color: var(--text-muted); font-size: 1rem; }
+    .table-container { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; text-align: left; }
+    th, td { padding: 18px 24px; border-bottom: 1px solid var(--border-color); }
+    th { background: rgba(255, 255, 255, 0.02); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-dim); }
+    td { font-size: 0.95rem; }
+    .badge-win { color: var(--accent-green); font-weight: 700; }
+    .badge-bad { color: #FF4D4D; font-weight: 500; }
+    .features { padding: 60px 0; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    .card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; transition: all 0.2s ease; }
+    .card:hover { border-color: rgba(0, 229, 255, 0.3); transform: translateY(-3px); }
+    .card-icon { font-size: 1.8rem; margin-bottom: 18px; display: inline-block; }
+    .card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+    .pricing { padding: 70px 0; text-align: center; }
+    .pricing-card { max-width: 460px; margin: 0 auto; background: linear-gradient(180deg, #181E29 0%, #11141A 100%); border: 1px solid rgba(0, 255, 102, 0.3); border-radius: 16px; padding: 40px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); position: relative; }
+    .pricing-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #00FF66 0%, #00E5FF 100%); color: #0B0D11; font-weight: 800; font-size: 0.75rem; padding: 4px 14px; border-radius: 999px; text-transform: uppercase; }
+    .price-num { font-size: 3.2rem; font-weight: 800; color: #FFF; margin: 16px 0 8px; }
+    .price-num span { font-size: 1.1rem; color: var(--text-dim); font-weight: 500; }
+    .pricing-features { list-style: none; text-align: left; margin: 28px 0; }
+    .pricing-features li { padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.95rem; color: var(--text-main); display: flex; align-items: center; gap: 10px; }
+    .pricing-features li span.check { color: var(--accent-green); font-weight: 800; }
+    footer { border-top: 1px solid var(--border-color); padding: 40px 0; text-align: center; color: var(--text-dim); font-size: 0.85rem; }
+    @media (max-width: 768px) { .hero h1 { font-size: 2.3rem; } .hero p { font-size: 1rem; } .grid-3 { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -348,12 +86,7 @@
   <header>
     <div class="container nav-wrap">
       <a href="#" class="logo">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="11" stroke="#00FF66" stroke-width="2"/>
-          <line x1="8" y1="10" x2="8" y2="14" stroke="#00FF66" stroke-width="2" stroke-linecap="round"/>
-          <line x1="12" y1="6" x2="12" y2="18" stroke="#00FF66" stroke-width="2" stroke-linecap="round"/>
-          <line x1="16" y1="9" x2="16" y2="15" stroke="#00FF66" stroke-width="2" stroke-linecap="round"/>
-        </svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="#00FF66" stroke-width="2"/><line x1="8" y1="10" x2="8" y2="14" stroke="#00FF66" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="6" x2="12" y2="18" stroke="#00FF66" stroke-width="2" stroke-linecap="round"/><line x1="16" y1="9" x2="16" y2="15" stroke="#00FF66" stroke-width="2" stroke-linecap="round"/></svg>
         TETHERLINK
         <span class="logo-badge">Beta v1.0</span>
       </a>
@@ -362,21 +95,20 @@
   </header>
 
   <main>
-    <!-- HERO -->
     <section class="hero container">
       <div class="hero-badge">
-        <span>⚡</span> C-Native Zero-Copy Latency Engine
+        <span>⚡</span> Native Zero-Copy Network Engine
       </div>
       <h1>
-        Play Games on Mobile Tethering<br>
-        <span class="gradient">Without Jitter, Throttling or Lag</span>
+        Play PC Games via Mobile Tethering<br>
+        <span class="gradient">With Ultra-Low Latency & High Stability</span>
       </h1>
       <p>
-        Bypass ISP hotspot caps, drop game ping from 120ms to 28ms, and unlock full 5G bandwidth on Steam, Valorant, and League of Legends.
+        Eliminate network jitter, stabilize game packet delivery, and maximize bandwidth throughput for competitive PC gaming on 5G/LTE tethering.
       </p>
 
       <div class="cta-group">
-        <a href="https://github.com/your-username/TetherLink/releases" class="btn btn-primary" id="btn-download">
+        <a href="https://github.com/tetherlink-team/TetherLink/releases" class="btn btn-primary">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           Download Free 48h Beta
         </a>
@@ -384,78 +116,75 @@
           Get Lifetime Pro ($14.99)
         </a>
       </div>
-      <div class="sub-note">Windows 10/11 & Android 10+ Compatible • No Root Required • Clean Installer</div>
+      <div class="sub-note">Windows 10/11 & Android 10+ Compatible • Zero Root Required • Clean Installer</div>
     </section>
 
-    <!-- BENCHMARKS TABLE -->
     <section class="benchmarks container">
       <div class="section-title">
-        <h2>Engine Performance Benchmark</h2>
-        <p>Measured on 5G Mobile Data (KT / SKT / T-Mobile / Verizon)</p>
+        <h2>Network Architecture Comparison</h2>
+        <p>Engineered to resolve standard Windows tethering packet bottlenecks</p>
       </div>
 
       <div class="table-container">
         <table>
           <thead>
             <tr>
-              <th>Feature / Metric</th>
+              <th>Architecture Metric</th>
               <th>Standard Windows Tethering</th>
-              <th>TetherLink Zero-Copy Engine</th>
+              <th>TetherLink Zero-Copy Bridge</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>LoL / Valorant In-Game Latency</strong></td>
-              <td class="badge-bad">85ms ~ 160ms (Severe Jitter)</td>
-              <td class="badge-win">⚡ 28ms ~ 34ms (Rock Solid)</td>
-            </tr>
-            <tr>
-              <td><strong>Carrier Tethering Cap / Throttling</strong></td>
-              <td class="badge-bad">Detected & Throttled (10~20GB Cap)</td>
-              <td class="badge-win">🛡️ 100% Bypassed (Full 5G Unlimited)</td>
-            </tr>
-            <tr>
               <td><strong>Driver I/O Overhead</strong></td>
-              <td class="badge-bad">High (NDIS Layer Virtual Stack)</td>
-              <td class="badge-win">⚡ 0ms (Wintun Ring Buffer)</td>
+              <td class="badge-bad">High (NDIS Virtual Network Stack)</td>
+              <td class="badge-win">⚡ ~0ms (Direct Wintun Ring Buffer)</td>
             </tr>
             <tr>
-              <td><strong>Steam / Battle.net UDP Routing</strong></td>
-              <td class="badge-bad">Packet Drops / DNS Timeout</td>
-              <td class="badge-win">⚡ Native TCP-DNS Async Tunneling</td>
+              <td><strong>Packet Jitter & Frame Stability</strong></td>
+              <td class="badge-bad">High Latency Spikes (Unbuffered)</td>
+              <td class="badge-win">⚡ Stabilized Low-Jitter Stream</td>
+            </tr>
+            <tr>
+              <td><strong>MTU Frame Optimization</strong></td>
+              <td class="badge-bad">Unoptimized (Packet Fragmentation)</td>
+              <td class="badge-win">⚡ Native L4 MTU Tuning (1400 MTU)</td>
+            </tr>
+            <tr>
+              <td><strong>DNS Resolution Engine</strong></td>
+              <td class="badge-bad">UDP 53 Hijack / Timeout Risk</td>
+              <td class="badge-win">⚡ Local Async TCP-DNS Tunnel</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- CORE FEATURES -->
     <section class="features container">
       <div class="section-title">
         <h2>Engineered for Competitive Gamers</h2>
-        <p>Built from scratch in pure C and Go for sub-millisecond packet forwarding.</p>
+        <p>Built with low-level kernel drivers and optimized packet pipelines.</p>
       </div>
 
       <div class="grid-3">
         <div class="card">
           <div class="card-icon">🚀</div>
-          <h3>Zero-Copy Memory Pipeline</h3>
-          <p>Utilizes WireGuard's high-speed Wintun kernel driver. Packets are directly transferred between USB and user space with zero buffer copying.</p>
+          <h3>Zero-Copy Kernel Pipeline</h3>
+          <p>Utilizes WireGuard's Wintun driver to stream game packets directly between USB and user space without redundant CPU memory copies.</p>
         </div>
         <div class="card">
           <div class="card-icon">🛡️</div>
-          <h3>Carrier Deep Packet Cloaking</h3>
-          <p>Normalizes packet TTL, disables QUIC leaks, and wraps L4 frames in mobile native signatures to bypass carrier hotspot limits.</p>
+          <h3>Traffic Stream Normalization</h3>
+          <p>Normalizes packet TTL headers and disables UDP QUIC leaks to ensure smooth, unthrottled bandwidth routing across all carriers.</p>
         </div>
         <div class="card">
           <div class="card-icon">⚡</div>
           <h3>Async TCP-DNS Engine</h3>
-          <p>Local 127.0.0.1:53 proxy routes all DNS requests over encrypted TCP, completely preventing mobile carrier DNS drop & poisoning.</p>
+          <p>Local 127.0.0.1:53 proxy routes DNS requests over TCP streams, preventing connection drops during match loading screens.</p>
         </div>
       </div>
     </section>
 
-    <!-- PRICING & BUY -->
     <section class="pricing container" id="pricing">
       <div class="pricing-card">
         <div class="pricing-badge">Early Bird Lifetime Access</div>
@@ -464,23 +193,23 @@
         <p style="color: var(--text-muted); font-size: 0.9rem;">One-time payment. Instant automated key delivery.</p>
 
         <ul class="pricing-features">
-          <li><span class="check">✔</span> <strong>Unlimited Lifetime Access</strong> (No 48h lock)</li>
-          <li><span class="check">✔</span> <strong>1-Click In-App Activation</strong></li>
-          <li><span class="check">✔</span> <strong>All Future C-Native Engine Updates</strong></li>
-          <li><span class="check">✔</span> <strong>Dedicated Discord & Support Access</strong></li>
+          <li><span class="check">✔</span> <strong>Unlimited Lifetime Access</strong> (1 PC Bound)</li>
+          <li><span class="check">✔</span> <strong>1-Click In-App License Activation</strong></li>
+          <li><span class="check">✔</span> <strong>All Future Core Engine Updates</strong></li>
+          <li><span class="check">✔</span> <strong>Priority Community Support</strong></li>
         </ul>
 
-        <a href="https://your-store.lemonsqueezy.com/checkout/buy/YOUR_VARIANT_ID" class="btn btn-primary" style="width: 100%;" id="btn-buy">
+        <a href="#pricing" class="btn btn-primary" style="width: 100%;" id="btn-buy">
           Unlock Lifetime License
         </a>
-        <div class="sub-note" style="margin-top: 12px;">Secured by Lemon Squeezy • 14-Day Money Back Guarantee</div>
+        <div class="sub-note" style="margin-top: 12px;">Secured by Lemon Squeezy • 14-Day Guarantee</div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="container">
-      <p>© 2026 TetherLink Team. All rights reserved. Ultra-Low Latency Zero-Copy Mobile Bridge.</p>
+      <p>© 2026 TetherLink Team. All rights reserved. Ultra-Low Latency Mobile Bridge.</p>
     </div>
   </footer>
 </body>
