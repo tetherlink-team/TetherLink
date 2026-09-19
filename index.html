@@ -14,7 +14,7 @@
             --bg-card: #131722;
             --bg-card-hover: #1A202E;
             --accent-green: #00FF66;
-            --accent-green-glow: rgba(0, 255, 102, 0.25);
+            --accent-green-glow: rgba(0, 255, 102, 0.35);
             --accent-cyan: #00E5FF;
             --text-main: #F7FAFC;
             --text-muted: #94A3B8;
@@ -106,17 +106,20 @@
             font-size: 0.85rem;
             text-decoration: none;
             transition: all 0.2s ease;
+            box-shadow: 0 0 12px rgba(0, 255, 102, 0.2);
         }
 
         .btn-nav:hover {
-            box-shadow: 0 0 16px var(--accent-green-glow);
+            box-shadow: 0 0 20px var(--accent-green-glow);
             transform: translateY(-1px);
         }
 
-        /* Hero */
+        /* Hero (네온 오로라 배경 적용) */
         .hero {
-            padding: 100px 0 70px;
+            padding: 110px 0 80px;
             text-align: center;
+            position: relative;
+            background: radial-gradient(circle at 50% 30%, rgba(0, 255, 102, 0.15) 0%, rgba(0, 229, 255, 0.05) 35%, transparent 70%);
         }
 
         .hero-tag {
@@ -176,10 +179,11 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 0 24px rgba(0, 255, 102, 0.35);
         }
 
         .btn-primary:hover {
-            box-shadow: 0 0 24px var(--accent-green-glow);
+            box-shadow: 0 0 36px rgba(0, 255, 102, 0.65);
             transform: translateY(-2px);
         }
 
@@ -200,6 +204,7 @@
 
         .btn-secondary:hover {
             background-color: #232B3D;
+            border-color: #3B465E;
         }
 
         /* Features */
@@ -269,7 +274,7 @@
         /* Pricing */
         .pricing {
             padding: 80px 0;
-            background: radial-gradient(circle at center, rgba(0, 255, 102, 0.05) 0%, transparent 70%);
+            background: radial-gradient(circle at center, rgba(0, 255, 102, 0.08) 0%, transparent 70%);
         }
 
         .pricing-card {
@@ -277,7 +282,7 @@
             margin: 0 auto;
             background-color: var(--bg-card);
             border: 1px solid var(--accent-green);
-            box-shadow: 0 0 32px rgba(0, 255, 102, 0.12);
+            box-shadow: 0 0 32px rgba(0, 255, 102, 0.15);
             padding: 40px;
             border-radius: 16px;
             text-align: center;
