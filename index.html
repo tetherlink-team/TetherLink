@@ -14,7 +14,7 @@
             --bg-card: #131722;
             --bg-card-hover: #1A202E;
             --accent-green: #00FF66;
-            --accent-green-glow: rgba(0, 255, 102, 0.35);
+            --accent-green-glow: rgba(0, 255, 102, 0.25);
             --accent-cyan: #00E5FF;
             --text-main: #F7FAFC;
             --text-muted: #94A3B8;
@@ -106,20 +106,17 @@
             font-size: 0.85rem;
             text-decoration: none;
             transition: all 0.2s ease;
-            box-shadow: 0 0 12px rgba(0, 255, 102, 0.2);
         }
 
         .btn-nav:hover {
-            box-shadow: 0 0 20px var(--accent-green-glow);
+            box-shadow: 0 0 16px var(--accent-green-glow);
             transform: translateY(-1px);
         }
 
-        /* Hero (네온 오로라 배경 적용) */
+        /* Hero (1.0.0 순수 다크 레이아웃 유지) */
         .hero {
-            padding: 110px 0 80px;
+            padding: 100px 0 70px;
             text-align: center;
-            position: relative;
-            background: radial-gradient(circle at 50% 30%, rgba(0, 255, 102, 0.15) 0%, rgba(0, 229, 255, 0.05) 35%, transparent 70%);
         }
 
         .hero-tag {
@@ -179,11 +176,10 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 0 24px rgba(0, 255, 102, 0.35);
         }
 
         .btn-primary:hover {
-            box-shadow: 0 0 36px rgba(0, 255, 102, 0.65);
+            box-shadow: 0 0 24px var(--accent-green-glow);
             transform: translateY(-2px);
         }
 
@@ -204,7 +200,6 @@
 
         .btn-secondary:hover {
             background-color: #232B3D;
-            border-color: #3B465E;
         }
 
         /* Features */
@@ -274,7 +269,7 @@
         /* Pricing */
         .pricing {
             padding: 80px 0;
-            background: radial-gradient(circle at center, rgba(0, 255, 102, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle at center, rgba(0, 255, 102, 0.05) 0%, transparent 70%);
         }
 
         .pricing-card {
@@ -282,7 +277,7 @@
             margin: 0 auto;
             background-color: var(--bg-card);
             border: 1px solid var(--accent-green);
-            box-shadow: 0 0 32px rgba(0, 255, 102, 0.15);
+            box-shadow: 0 0 32px rgba(0, 255, 102, 0.12);
             padding: 40px;
             border-radius: 16px;
             text-align: center;
@@ -408,15 +403,16 @@
             <div class="hero-tag">⚡ C-Native High Performance Packet Engine</div>
             <h1 class="hero-title">Unlimited PC Tethering to <span>Bypass Hotspot Limits</span></h1>
             <p class="hero-desc">Bypass carrier hotspot caps and eliminate proxy-induced bufferbloat. Transform your Android smartphone into a high-performance raw packet interface for Windows PC.</p>
-            
+
             <div class="hero-cta" id="download">
                 <a id="btn-download-win" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-primary">
-                    <span>⬇ Download 48-Hour Free Trial (Windows Installer)</span>
+                    <span>⬇ Download 48-Hour Free Trial (Windows .zip)</span>
                 </a>
                 <a id="btn-download-apk" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-secondary">
                     <span>📱 Download Android APK</span>
                 </a>
             </div>
+
             <!-- VirusTotal 클린 인증 배지 -->
             <div style="margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.85rem; color: #94A3B8;">
                 <span style="display: inline-block; width: 8px; height: 8px; background-color: var(--accent-green); border-radius: 50%;"></span>
@@ -425,6 +421,7 @@
                     VirusTotal Clean Report (0/51 Detections)
                 </a>
             </div>
+
             <!-- 스마트스크린 실행 안내 문구 -->
             <div style="margin-top: 8px; font-size: 0.8rem; color: #64748B;">
                 * If Windows SmartScreen appears: Click <span style="color: #CBD5E1; text-decoration: underline;">"More info"</span> → <span style="color: var(--accent-green); font-weight: 600;">"Run anyway"</span>
@@ -481,7 +478,6 @@
                 </a>
             </div>
 
-            <!-- Performance & Carrier Notice -->
             <div class="disclaimer-box">
                 <p><strong>* Notice on Network Performance:</strong> Actual throughput speeds and in-game ping depend on local cellular tower distance, carrier band congestion, and hardware specifications. We strongly encourage all users to evaluate their environment using the <strong>48-Hour Full Access Free Trial</strong> prior to purchasing.</p>
             </div>
@@ -522,18 +518,17 @@
             <p style="margin-top: 8px;">Contact: wjddnjs21872@gmail.com | Support Response Time: &lt; 24 Hours</p>
         </div>
     </footer>
-    
+
+    <!-- GitHub 최신 릴리즈 자동 연동 스크립트 -->
     <script>
     fetch('https://api.github.com/repos/wjddnjs21872/TetherLink/releases/latest')
       .then(res => res.json())
       .then(data => {
         data.assets.forEach(asset => {
-          // ZIP 파일 자동 연결 (Windows)
           if (asset.name.endsWith('.zip')) {
             const winBtn = document.querySelector('#btn-download-win');
             if (winBtn) winBtn.href = asset.browser_download_url;
           }
-          // APK 파일 자동 연결 (Android)
           if (asset.name.endsWith('.apk')) {
             const apkBtn = document.querySelector('#btn-download-apk');
             if (apkBtn) apkBtn.href = asset.browser_download_url;
@@ -542,6 +537,6 @@
       })
       .catch(err => console.error("Release fetch error:", err));
     </script>
-    
+
 </body>
 </html>
