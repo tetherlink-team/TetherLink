@@ -383,7 +383,7 @@
         <div class="container nav-content">
             <a href="#" class="brand">
                 <span>⚡ TetherLink</span>
-                <span class="brand-badge">v1.0.1 LIVE</span>
+                <span class="brand-badge"> LIVE</span>
             </a>
             <div class="nav-links">
                 <a href="#features" class="nav-link">Architecture</a>
@@ -402,11 +402,11 @@
             <p class="hero-desc">Bypass carrier hotspot caps and eliminate proxy-induced bufferbloat. Transform your Android smartphone into a high-performance raw packet interface for Windows PC.</p>
             
             <div class="hero-cta" id="download">
-                <a href="https://github.com/wjddnjs21872/TetherLink/releases/latest/download/TetherLink_Setup_v1.0.1.exe" class="btn-primary">
+                <a id="btn-download-win" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-download">
                     <span>⬇ Download 48-Hour Free Trial (Windows Installer)</span>
                 </a>
-                <a href="https://github.com/wjddnjs21872/TetherLink/releases/latest/download/TetherLink_Mobile.apk" class="btn-secondary">
-                    <span>📱 Download Android APK (v1.0.1)</span>
+                <a id="btn-download-apk" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-download">
+                    <span>📱 Download Android APK </span>
                 </a>
             </div>
             <!-- VirusTotal 클린 인증 배지 -->
@@ -514,6 +514,26 @@
         <p style="margin-top: 8px;">Contact: wjddnjs21872@gmail.com | Support Response Time: &lt; 24 Hours</p>
     </div>
 </footer>
-
+    
+<script>
+fetch('https://api.github.com/repos/wjddnjs21872/TetherLink/releases/latest')
+  .then(res => res.json())
+  .then(data => {
+    data.assets.forEach(asset => {
+      // ZIP 파일 자동 연결 (Windows)
+      if (asset.name.endsWith('.zip')) {
+        const winBtn = document.querySelector('#btn-download-win');
+        if (winBtn) winBtn.href = asset.browser_download_url;
+      }
+      // APK 파일 자동 연결 (Android)
+      if (asset.name.endsWith('.apk')) {
+        const apkBtn = document.querySelector('#btn-download-apk');
+        if (apkBtn) apkBtn.href = asset.browser_download_url;
+      }
+    });
+  })
+  .catch(err => console.error("Release fetch error:", err));
+</script>
+    
 </body>
 </html>
