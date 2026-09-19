@@ -1,11 +1,18 @@
 # TetherLink
 
----
+Kernel-level Zero-Copy USB tethering pipeline for low-latency network routing and carrier limit bypass.
 
-> ### 🎁 Public Launch & Early Adopter Offer
-> TetherLink is officially launched! To celebrate, we are offering an automatic **33% launch discount** for our early community members.
->
-> * **48-Hour Full Access:** Fully functional free trial included. No credit card required. Experience native Wintun low-latency tethering.
-> * **Lifetime License ($10.04 / Regular $14.99):** [Get TetherLink Lifetime Pro on Gumroad](https://2243482669641.gumroad.com/l/tetherlink-official) *(Discount automatically applied at checkout)*
+TetherLink transforms your Android smartphone into a raw packet processing interface for Windows PC via direct USB protocol tunneling. Operates through a kernel-level Wintun driver pipeline without proxy overhead or bufferbloat.
 
 ---
+
+### Features
+* **Zero-Copy Wintun Architecture**: Direct Layer-3 packet exchange with zero buffering delay.
+* **Carrier Limit Bypass**: Eliminates hotspot throttling and strict NAT routing natively.
+* **Full-Speed Tunneling**: Dynamic MTU clamping (1400 Bytes) to prevent packet fragmentation.
+* **48-Hour Free Trial**: Includes all engine features upon installation for environment evaluation.
+
+### Requirements
+* **PC**: Windows 10 / 11 (64-bit)
+* **Mobile**: Android 8.0+ with USB Debugging enabled
+* **Hardware**: Standard USB data cable
