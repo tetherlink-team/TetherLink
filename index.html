@@ -28,8 +28,15 @@
             padding: 0;
         }
 
+        /* 하이엔드 테크 그리드 + 상단 와이드 네온 안개 배경 */
         body {
             background-color: var(--bg-main);
+            background-image: 
+                radial-gradient(ellipse 120% 650px at 50% -120px, rgba(0, 255, 102, 0.12) 0%, rgba(0, 229, 255, 0.03) 45%, transparent 75%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 48px 48px, 48px 48px;
+            background-position: center top, center top, center top;
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
@@ -113,9 +120,9 @@
             transform: translateY(-1px);
         }
 
-        /* Hero (1.0.0 순수 다크 레이아웃 유지) */
+        /* Hero */
         .hero {
-            padding: 100px 0 70px;
+            padding: 105px 0 75px;
             text-align: center;
         }
 
@@ -176,10 +183,11 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.2);
         }
 
         .btn-primary:hover {
-            box-shadow: 0 0 24px var(--accent-green-glow);
+            box-shadow: 0 0 28px var(--accent-green-glow);
             transform: translateY(-2px);
         }
 
@@ -200,6 +208,7 @@
 
         .btn-secondary:hover {
             background-color: #232B3D;
+            border-color: #3B465E;
         }
 
         /* Features */
@@ -269,7 +278,6 @@
         /* Pricing */
         .pricing {
             padding: 80px 0;
-            background: radial-gradient(circle at center, rgba(0, 255, 102, 0.05) 0%, transparent 70%);
         }
 
         .pricing-card {
