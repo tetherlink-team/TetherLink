@@ -193,6 +193,9 @@
             font-size: 1rem;
             border: 1px solid var(--border-color);
             transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         .btn-secondary:hover {
@@ -383,7 +386,7 @@
         <div class="container nav-content">
             <a href="#" class="brand">
                 <span>⚡ TetherLink</span>
-                <span class="brand-badge"> LIVE</span>
+                <span class="brand-badge">LIVE</span>
             </a>
             <div class="nav-links">
                 <a href="#features" class="nav-link">Architecture</a>
@@ -402,11 +405,11 @@
             <p class="hero-desc">Bypass carrier hotspot caps and eliminate proxy-induced bufferbloat. Transform your Android smartphone into a high-performance raw packet interface for Windows PC.</p>
             
             <div class="hero-cta" id="download">
-                <a id="btn-download-win" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-download">
+                <a id="btn-download-win" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-primary">
                     <span>⬇ Download 48-Hour Free Trial (Windows Installer)</span>
                 </a>
-                <a id="btn-download-apk" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-download">
-                    <span>📱 Download Android APK </span>
+                <a id="btn-download-apk" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-secondary">
+                    <span>📱 Download Android APK</span>
                 </a>
             </div>
             <!-- VirusTotal 클린 인증 배지 -->
@@ -427,7 +430,7 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-               <h2>Engineered for Kernel-Level Speed &amp; Raw Stability</h2>
+                <h2>Engineered for Kernel-Level Speed &amp; Raw Stability</h2>
                 <p>Kernel-level optimization bypassing user-mode proxy and NDIS bottlenecks.</p>
             </div>
 
@@ -505,35 +508,35 @@
         </div>
     </section>
 
-<footer>
-    <div class="container">
-        <p style="font-size: 0.75rem; color: #718096; max-width: 800px; margin: 0 auto 12px auto; line-height: 1.5;">
-            <strong>Legal Disclaimer:</strong> TetherLink is an independent software utility and is not affiliated with, authorized, maintained, sponsored, or endorsed by Microsoft, Google (Android), Valve Corporation (Steam), Riot Games, or any telecommunications carrier. All registered trademarks and logos belong to their respective owners.
-        </p>
-        <p>© 2026 TetherLink Team. Official open deployment hosted via GitHub Infrastructure.</p>
-        <p style="margin-top: 8px;">Contact: wjddnjs21872@gmail.com | Support Response Time: &lt; 24 Hours</p>
-    </div>
-</footer>
+    <footer>
+        <div class="container">
+            <p style="font-size: 0.75rem; color: #718096; max-width: 800px; margin: 0 auto 12px auto; line-height: 1.5;">
+                <strong>Legal Disclaimer:</strong> TetherLink is an independent software utility and is not affiliated with, authorized, maintained, sponsored, or endorsed by Microsoft, Google (Android), Valve Corporation (Steam), Riot Games, or any telecommunications carrier. All registered trademarks and logos belong to their respective owners.
+            </p>
+            <p>© 2026 TetherLink Team. Official open deployment hosted via GitHub Infrastructure.</p>
+            <p style="margin-top: 8px;">Contact: wjddnjs21872@gmail.com | Support Response Time: &lt; 24 Hours</p>
+        </div>
+    </footer>
     
-<script>
-fetch('https://api.github.com/repos/wjddnjs21872/TetherLink/releases/latest')
-  .then(res => res.json())
-  .then(data => {
-    data.assets.forEach(asset => {
-      // ZIP 파일 자동 연결 (Windows)
-      if (asset.name.endsWith('.zip')) {
-        const winBtn = document.querySelector('#btn-download-win');
-        if (winBtn) winBtn.href = asset.browser_download_url;
-      }
-      // APK 파일 자동 연결 (Android)
-      if (asset.name.endsWith('.apk')) {
-        const apkBtn = document.querySelector('#btn-download-apk');
-        if (apkBtn) apkBtn.href = asset.browser_download_url;
-      }
-    });
-  })
-  .catch(err => console.error("Release fetch error:", err));
-</script>
+    <script>
+    fetch('https://api.github.com/repos/wjddnjs21872/TetherLink/releases/latest')
+      .then(res => res.json())
+      .then(data => {
+        data.assets.forEach(asset => {
+          // ZIP 파일 자동 연결 (Windows)
+          if (asset.name.endsWith('.zip')) {
+            const winBtn = document.querySelector('#btn-download-win');
+            if (winBtn) winBtn.href = asset.browser_download_url;
+          }
+          // APK 파일 자동 연결 (Android)
+          if (asset.name.endsWith('.apk')) {
+            const apkBtn = document.querySelector('#btn-download-apk');
+            if (apkBtn) apkBtn.href = asset.browser_download_url;
+          }
+        });
+      })
+      .catch(err => console.error("Release fetch error:", err));
+    </script>
     
 </body>
 </html>
