@@ -28,7 +28,6 @@
             padding: 0;
         }
 
-        /* 하이엔드 테크 그리드 + 상단 와이드 네온 안개 배경 */
         body {
             background-color: var(--bg-main);
             background-image: 
@@ -49,7 +48,7 @@
             padding: 0 24px;
         }
 
-        /* 론칭 특가 상단 공지 바 (Top Announcement Bar) */
+        /* 론칭 특가 상단 공지 바 */
         .promo-banner {
             background: rgba(0, 255, 102, 0.08);
             border-bottom: 1px solid rgba(0, 255, 102, 0.22);
@@ -334,19 +333,43 @@
             font-size: 3rem;
             font-weight: 800;
             color: var(--accent-green);
-            margin: 20px 0;
+            margin: 16px 0 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
         }
 
-        .pricing-price span {
+        .pricing-price .original-price {
+            text-decoration: line-through;
+            color: #64748B;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        .pricing-price span.period {
             font-size: 1rem;
             color: var(--text-muted);
             font-weight: 500;
         }
 
+        .discount-tag {
+            display: inline-block;
+            background: rgba(0, 255, 102, 0.1);
+            border: 1px solid rgba(0, 255, 102, 0.25);
+            color: var(--accent-green);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 99px;
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+
         .pricing-list {
             list-style: none;
             text-align: left;
-            margin: 28px 0;
+            margin: 24px 0 28px 0;
         }
 
         .pricing-list li {
@@ -426,7 +449,7 @@
     <!-- 론칭 프로모션 공지 배너 -->
     <div class="promo-banner">
         <a href="https://2243482669641.gumroad.com/l/tetherlink-pro" target="_blank" rel="noopener noreferrer">
-            🚀 <strong class="accent">Launch Special:</strong> Get <strong class="highlight">33% OFF</strong> Lifetime Pro for a limited time (Discount applied at checkout)
+            🚀 <strong class="accent">Launch Special:</strong> Save <strong class="highlight">33% OFF</strong> Lifetime Pro (Discount automatically applied at checkout)
         </a>
     </div>
 
@@ -440,8 +463,8 @@
                 <a href="#features" class="nav-link">Architecture</a>
                 <a href="#download" class="nav-link">Download</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#legal" class="nav-link">Refund & Terms</a>
-                <a href="https://2243482669641.gumroad.com/l/tetherlink-pro" target="_blank" class="btn-nav">Get Pro ($14.99)</a>
+                <a href="#legal" class="nav-link">Refund &amp; Terms</a>
+                <a href="https://2243482669641.gumroad.com/l/tetherlink-pro" target="_blank" class="btn-nav">Get Pro (33% OFF)</a>
             </div>
         </div>
     </nav>
@@ -513,7 +536,13 @@
 
             <div class="pricing-card">
                 <div class="pricing-title">Lifetime Pro License</div>
-                <div class="pricing-price">$14.99 <span>/ one-time</span></div>
+                <div class="pricing-price">
+                    <span class="original-price">$14.99</span>
+                    $10.04 <span class="period">/ one-time</span>
+                </div>
+                <div>
+                    <span class="discount-tag">⚡ 33% LAUNCH DISCOUNT APPLIED</span>
+                </div>
                 <ul class="pricing-list">
                     <li>✔ <strong>Unlimited Lifetime Usage</strong> (All future updates)</li>
                     <li>✔ <strong>Instant HMAC License Key Delivery</strong> via Email</li>
@@ -522,7 +551,7 @@
                     <li>✔ <strong>14-Day Money-Back Guarantee</strong></li>
                 </ul>
                 <a href="https://2243482669641.gumroad.com/l/tetherlink-pro" target="_blank" class="btn-primary" style="width: 100%; justify-content: center;">
-                    Unlock Lifetime Pro ($14.99)
+                    Unlock Lifetime Pro (33% OFF)
                 </a>
             </div>
 
@@ -536,7 +565,7 @@
     <section class="legal-section" id="legal">
         <div class="container">
             <div class="section-header">
-                <h2>Customer Policies & Guarantees</h2>
+                <h2>Customer Policies &amp; Guarantees</h2>
                 <p>Complete compliance with digital software consumer protection guidelines.</p>
             </div>
 
@@ -546,12 +575,12 @@
             </div>
 
             <div class="legal-box">
-                <h3>Terms of Service & License Delivery</h3>
+                <h3>Terms of Service &amp; License Delivery</h3>
                 <p>Upon completing checkout, your Pro license key (e.g., <code>XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX</code>) is instantly generated and delivered to your email address. You may activate your license directly inside the TetherLink desktop client by clicking [Enter License Key]. Lifetime licenses include all minor and major engine updates without recurring fees.</p>
             </div>
 
             <div class="legal-box">
-                <h3>Privacy & Data Policy</h3>
+                <h3>Privacy &amp; Data Policy</h3>
                 <p>TetherLink is a zero-telemetry local network utility. All network packet routing happens entirely on your local machine and mobile bridge. We do not inspect, log, store, or transmit your gaming traffic or personal browsing data to external servers.</p>
             </div>
         </div>
