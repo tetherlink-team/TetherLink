@@ -18,7 +18,7 @@ TetherLink transforms your Android smartphone into a high-performance raw packet
 * **Carrier Throttling Bypass**: Seamlessly handles high-throughput traffic at the hardware transport layer without triggering mobile hotspot detection buckets.
 * **Zero Thermal Throttling**: Low-power USB transport keeps your smartphone cool and charging, avoiding the battery degradation common with Wi-Fi proxies.
 * **Zero-Fragmentation Protocol**: Intelligent dynamic packet optimization prevents transmission stalls during peak bandwidth utilization.
-* **48-Hour Full Access Trial**: Evaluate the complete high-speed engine in your environment prior to license purchase.
+* **Zero Configuration**: Plug-and-play setup without requiring complex routing configurations.
 
 ### 🚀 Real-World Gaming Benchmark
 ![TetherLink Steam Download Benchmark - 127.6 Mbps Sustained Peak](https://github.com/user-attachments/assets/ef241c5f-88dc-494f-b2b3-9bfea5260dfd)
