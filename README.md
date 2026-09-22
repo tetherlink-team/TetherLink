@@ -7,7 +7,7 @@ TetherLink transforms your Android smartphone into a high-performance raw packet
 ---
 
 ### 📥 Download & Official Links
-* **Latest Release**: [Download TetherLink Setup v1.0.2 (.exe)](https://github.com/tetherlink-team/TetherLink)
+* **Latest Release**: [Download TetherLink Setup v1.0.2 (.exe)](https://github.com/wjddnjs21872/TetherLink/releases/latest)
 
 ---
 
