@@ -20,7 +20,16 @@ TetherLink transforms your Android smartphone into a high-performance raw packet
 * **Zero-Fragmentation Protocol**: Intelligent dynamic packet optimization prevents transmission stalls during peak bandwidth utilization.
 * **48-Hour Full Access Trial**: Evaluate the complete high-speed engine in your environment prior to license purchase.
 
+### 🚀 Real-World Gaming Benchmark
+![TetherLink Steam Download Benchmark - 127.6 Mbps Sustained Peak](https://github.com/user-attachments/assets/ef241c5f-88dc-494f-b2b3-9bfea5260dfd)
+
+* **Test Environment**: Cellular LTE+ (4G LTE-A) connection via standard USB cable (no Wi-Fi).
+* **Sustained Throughput**: Maintained **121.6+ Mbps** (Peak: **127.6 Mbps**) without packet drops, completely saturating the local carrier band.
+* **5G / High-Bandwidth Ready**: C-native zero-copy pipeline capable of scaling seamlessly to 5G multi-hundred Mbps line rates.
+* **Zero Thermal Throttling**: Low-power hardware transport keeps the phone completely cool and charging throughout the entire 20GB+ download session.
+
 ### Requirements
 * **PC**: Windows 10 / 11 (64-bit)
 * **Mobile**: Android 8.0+ with USB Debugging enabled
 * **Hardware**: Standard USB data cable
+
