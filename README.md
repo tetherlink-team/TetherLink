@@ -7,7 +7,7 @@ TetherLink transforms your Android smartphone into a high-performance raw packet
 ---
 
 ### 📥 Download & Official Links
-* **Latest Release**: [Download TetherLink Setup v1.0.2 (.exe)](https://github.com/wjddnjs21872/TetherLink/releases/latest)
+* **Latest Release**: [Download TetherLink Setup v1.1.0 (.exe)](https://github.com/tetherlink-team/TetherLink/releases/latest)
 
 ---
 
@@ -18,7 +18,9 @@ TetherLink transforms your Android smartphone into a high-performance raw packet
 * **Zero Thermal Throttling**: Low-power USB transport keeps your smartphone cool and charging, avoiding the battery degradation common with Wi-Fi proxies.
 * **Zero-Fragmentation Protocol**: Intelligent dynamic packet optimization prevents transmission stalls during peak bandwidth utilization.
 * **Zero Configuration**: Plug-and-play setup without requiring complex routing configurations.
-
+* **Doze-Mode Bypass**: Integrated screen-awake control in the desktop client to prevent Android from cutting USB bus throughput during sleep.
+* **Clean Process Lifecycle**: Automatic teardown hooks guarantee mobile background services terminate immediately when the PC client closes, ensuring zero battery drain.
+  
 ### 🚀 Real-World Gaming Benchmark
 ![TetherLink Steam Download Benchmark - 127.6 Mbps Sustained Peak](https://github.com/user-attachments/assets/ef241c5f-88dc-494f-b2b3-9bfea5260dfd)
 
