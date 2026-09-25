@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>TetherLink - Official Zero-Copy USB Tethering & Hotspot Bypass</title>
-<meta name="description" content="TetherLink is an ultra-low latency userspace tethering relay for PC. Bypass carrier hotspot limits with zero-copy USB routing and low bufferbloat.">
+    <title>TetherLink - Official Zero-Copy USB Tethering & Hotspot Bypass</title>
+    <meta name="description" content="TetherLink is an ultra-low latency userspace tethering relay for PC and Linux. Bypass carrier hotspot limits with zero-copy USB routing and low bufferbloat.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -199,6 +199,7 @@
         .hero-cta {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 16px;
             flex-wrap: wrap;
         }
@@ -473,11 +474,14 @@
         <div class="container">
             <div class="hero-tag">⚡ C-Native High Performance Packet Engine</div>
             <h1 class="hero-title">Unlimited PC Tethering to <span>Bypass Hotspot Limits</span></h1>
-            <p class="hero-desc">Bypass carrier hotspot caps and eliminate proxy-induced bufferbloat. Transform your Android smartphone into a high-performance raw packet interface for Windows PC.</p>
+            <p class="hero-desc">Bypass carrier hotspot caps and eliminate proxy-induced bufferbloat. Transform your Android smartphone into a high-performance raw packet interface for Windows PC &amp; Linux.</p>
 
             <div class="hero-cta" id="download">
                 <a id="btn-download-win" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-primary">
                     <span>⬇ Download 48-Hour Free Trial (Windows .zip)</span>
+                </a>
+                <a id="btn-download-linux" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-secondary">
+                    <span>🐧 Download Linux CLI (.run)</span>
                 </a>
                 <a id="btn-download-apk" href="https://github.com/wjddnjs21872/TetherLink/releases/latest" class="btn-secondary">
                     <span>📱 Download Android APK</span>
@@ -605,6 +609,10 @@
           if (asset.name.endsWith('.zip')) {
             const winBtn = document.querySelector('#btn-download-win');
             if (winBtn) winBtn.href = asset.browser_download_url;
+          }
+          if (asset.name.endsWith('.run')) {
+            const linuxBtn = document.querySelector('#btn-download-linux');
+            if (linuxBtn) linuxBtn.href = asset.browser_download_url;
           }
           if (asset.name.endsWith('.apk')) {
             const apkBtn = document.querySelector('#btn-download-apk');
