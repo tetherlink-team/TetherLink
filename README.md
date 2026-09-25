@@ -6,10 +6,15 @@ TetherLink transforms your Android smartphone into a high-performance raw packet
 
 ---
 
-### 📥 Download & Official Links
-* **Windows Client:** [Download TetherLink Setup v1.1.0 (.exe)](https://github.com/tetherlink-team/TetherLink/releases)
-* **Linux CLI (Standalone):** [Download TetherLink CLI v1.0.0 (.run)](https://github.com/tetherlink-team/TetherLink/releases)
-#### 🐧 Linux Quick Start
+### 🐧 Linux Quick Start
+
+> **Prerequisite:** Android platform tools (`adb`) must be installed on the host system:
+> - **Debian / Ubuntu:** `sudo apt install adb`
+> - **Fedora:** `sudo dnf install android-tools`
+> - **Arch Linux:** `sudo pacman -S android-tools`
+>
+> *Note: Make sure to unlock your phone and accept the **"Allow USB debugging"** prompt when prompted.*
+
 ```bash
 chmod +x tetherlink-linux-v1.0.0.run
 sudo ./tetherlink-linux-v1.0.0.run
