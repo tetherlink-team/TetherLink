@@ -2,13 +2,19 @@
 
 Direct Hardware-Level USB Packet Pipeline for Ultra-Low Latency Carrier Limit Bypass.
 
-TetherLink transforms your Android smartphone into a high-performance raw packet processing interface for Windows PC. Engineered from the ground up to eliminate bufferbloat, bypass carrier hotspot throttling, and deliver native gigabit-grade throughput without proxy overhead.
+TetherLink transforms your Android smartphone into a high-performance raw packet processing interface for Windows PC and Linux. Engineered from the ground up to eliminate bufferbloat, bypass carrier hotspot throttling, and deliver native gigabit-grade throughput without proxy overhead.
 
 ---
 
 ### 📥 Download & Official Links
-* **Latest Release**: [Download TetherLink Setup v1.1.0 (.exe)](https://github.com/tetherlink-team/TetherLink/releases/latest)
-
+* **Windows Client:** [Download TetherLink Setup v1.1.0 (.exe)](https://github.com/tetherlink-team/TetherLink/releases)
+* **Linux CLI (Standalone):** [Download TetherLink CLI v1.0.0 (.run)](https://github.com/tetherlink-team/TetherLink/releases)
+#### 🐧 Linux Quick Start
+```bash
+chmod +x tetherlink-linux-v1.0.0.run
+sudo ./tetherlink-linux-v1.0.0.run
+```
+> To uninstall and flush routes: `sudo tetherlink-uninstall`
 ---
 
 ### Key Capabilities
@@ -30,7 +36,10 @@ TetherLink transforms your Android smartphone into a high-performance raw packet
 * **Zero Thermal Throttling**: Low-power hardware transport keeps the phone completely cool and charging throughout the entire 20GB+ download session.
 
 ### Requirements
-* **PC**: Windows 10 / 11 (64-bit)
-* **Mobile**: Android 8.0+ with USB Debugging enabled
-* **Hardware**: Standard USB data cable
+
+* **PC:** 
+  * Windows 10 / 11 (64-bit)
+  * Linux (x86_64, systemd-based distributions)
+* **Mobile:** Android 8.0+ with USB Debugging enabled
+* **Hardware:** Standard USB data cable
 
