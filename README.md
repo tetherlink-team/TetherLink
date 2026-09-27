@@ -8,16 +8,16 @@ TetherLink transforms your Android smartphone into a high-performance raw packet
 
 ### 🐧 Linux Quick Start
 
-> **Prerequisite:** Android platform tools (`adb`) must be installed on the host system:
-> - **Debian / Ubuntu:** `sudo apt install adb`
-> - **Fedora:** `sudo dnf install android-tools`
-> - **Arch Linux:** `sudo pacman -S android-tools`
->
-> *Note: Make sure to unlock your phone and accept the **"Allow USB debugging"** prompt when prompted.*
+> **Zero Prerequisites**: Fully standalone bridging engine bundled. No external packages (`adb`) required.
 
-```bash
-chmod +x tetherlink-linux-v1.0.0.run
-sudo ./tetherlink-linux-v1.0.0.run
+1. **Mobile Preparation**:
+   * Enable **USB Debugging** on your phone *(Keep "USB Tethering" OFF)*.
+   * Connect via USB, accept the *"Allow USB debugging"* prompt, and tap **Start** in the TetherLink mobile app.
+
+2. **Installation**:
+   ```bash
+   chmod +x TetherLink_Installer.run
+   sudo ./TetherLink_Installer.run
 ```
 > To uninstall and flush routes: `sudo tetherlink-uninstall`
 ---
