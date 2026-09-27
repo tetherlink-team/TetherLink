@@ -15,11 +15,14 @@ TetherLink transforms your Android smartphone into a high-performance raw packet
    * Connect via USB, accept the *"Allow USB debugging"* prompt, and tap **Start** in the TetherLink mobile app.
 
 2. **Installation**:
-bash
-   chmod +x TetherLink_Installer.run
-   sudo ./TetherLink_Installer.run
+   * `chmod +x TetherLink_Installer.run`
+   * `sudo ./TetherLink_Installer.run`
 
-> To uninstall and flush routes: `sudo tetherlink-uninstall`
+3. **Usage**:
+   * Start Service: `sudo tetherlink`
+   * Check Status: `sudo tetherlink --status`
+   * Clean Uninstall: `sudo tetherlink-uninstall`
+
 ---
 
 ### Key Capabilities
