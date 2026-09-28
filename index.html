@@ -310,6 +310,107 @@
             line-height: 1.5;
         }
 
+        /* 벤치마크 실측 인터랙티브 쇼케이스 섹션 */
+        .showcase {
+            padding: 40px 0 80px;
+        }
+
+        .showcase-container {
+            max-width: 960px;
+            margin: 0 auto;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .showcase-tabs {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+
+        .showcase-tab {
+            background-color: #0E121B;
+            border: 1px solid var(--border-color);
+            color: var(--text-muted);
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .showcase-tab:hover {
+            color: var(--text-main);
+            border-color: #3B465E;
+        }
+
+        .showcase-tab.active {
+            background: rgba(0, 255, 102, 0.1);
+            border-color: var(--accent-green);
+            color: #FFFFFF;
+            box-shadow: 0 0 12px rgba(0, 255, 102, 0.2);
+        }
+
+        .showcase-item {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .showcase-item.active {
+            display: block;
+        }
+
+        .showcase-media {
+            width: 100%;
+            background-color: #080A0F;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .showcase-media img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .showcase-info {
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        .showcase-info h4 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        .showcase-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         /* Pricing */
         .pricing {
             padding: 80px 0;
@@ -464,6 +565,7 @@
             </a>
             <div class="nav-links">
                 <a href="#features" class="nav-link">Architecture</a>
+                <a href="#benchmarks" class="nav-link">Benchmarks</a>
                 <a href="#download" class="nav-link">Download</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
                 <a href="#legal" class="nav-link">Refund &amp; Terms</a>
@@ -533,6 +635,72 @@
         </div>
     </section>
 
+    <!-- 4단 실측 증거 인터랙티브 탭 쇼케이스 섹션 -->
+    <section class="showcase" id="benchmarks">
+        <div class="container">
+            <div class="section-header">
+                <h2>Verified Real-World Benchmarks &amp; Proof</h2>
+                <p>Actual measured speeds, zero hotspot deduction verification, and high-load stress testing.</p>
+            </div>
+
+            <div class="showcase-container">
+                <div class="showcase-tabs">
+                    <button class="showcase-tab active" onclick="switchTab(0)">⚡ 1,089 Mbps Speed</button>
+                    <button class="showcase-tab" onclick="switchTab(1)">🛡️ 95GB Zero Hotspot Leak</button>
+                    <button class="showcase-tab" onclick="switchTab(2)">🚀 213 MB/s Multi-Stream</button>
+                    <button class="showcase-tab" onclick="switchTab(3)">🐧 Debian Linux CLI</button>
+                </div>
+
+                <!-- 1번 탭: 1,089 Mbps 스피드테스트 (URL 자동 삽입 완료) -->
+                <div class="showcase-item active">
+                    <div class="showcase-media">
+                        <img src="https://github.com/user-attachments/assets/025140dc-516b-4da8-b035-f8027a516a49" alt="TetherLink 1,089 Mbps Speedtest Benchmark">
+                    </div>
+                    <div class="showcase-info">
+                        <h4>1,089.49 Mbps Sustained Line Rate at 23ms Ping</h4>
+                        <p>Zero bufferbloat, ultra-low latency direct transport saturating local gigabit cellular hardware bandwidth.</p>
+                    </div>
+                </div>
+
+                <!-- 2번 탭: AT&T 94.76 GB 무누수 -->
+                <div class="showcase-item">
+                    <div class="showcase-media">
+                        <!-- 아래 src 안에 95GB 무누수 이미지 URL을 넣어주세요 -->
+                        <img src="여기에_2번_이미지_URL_붙여넣기" alt="Carrier 0.00 GB Hotspot Deduction Proof">
+                    </div>
+                    <div class="showcase-info">
+                        <h4>94.76 GB Streamed with Exactly 0.00 GB Hotspot Deducted</h4>
+                        <p>100% of high-volume tethered PC traffic is recognized natively as on-device smartphone data by carrier metering.</p>
+                    </div>
+                </div>
+
+                <!-- 3번 탭: 5개 파일 동시 병렬 다운로드 (213 MB/s) -->
+                <div class="showcase-item">
+                    <div class="showcase-media">
+                        <!-- 아래 src 안에 5개 병렬 다운로드 이미지 URL을 넣어주세요 -->
+                        <img src="여기에_3번_이미지_URL_붙여넣기" alt="5 Simultaneous Multi-Stream Transfers at 213 MB/s">
+                    </div>
+                    <div class="showcase-info">
+                        <h4>Sustained 213.34 MB/s Under Heavy Multi-Stream Load</h4>
+                        <p>Rock-solid C-native zero-copy throughput without thread locking, micro-stutters, or connection drops.</p>
+                    </div>
+                </div>
+
+                <!-- 4번 탭: Debian Linux CLI -->
+                <div class="showcase-item">
+                    <div class="showcase-media">
+                        <!-- 아래 src 안에 데비안 리눅스 이미지 URL을 넣어주세요 -->
+                        <img src="여기에_4번_이미지_URL_붙여넣기" alt="TetherLink Headless Linux CLI on Debian 13">
+                    </div>
+                    <div class="showcase-info">
+                        <h4>Native Cross-Platform Engine for Linux Workstations</h4>
+                        <p>Standalone zero-dependency CLI binary providing kernel-level network bridging without ADB requirement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">
@@ -577,7 +745,8 @@
 
             <div class="legal-box">
                 <h3>14-Day Money-Back Guarantee (Refund Policy)</h3>
-                <p>We stand behind the performance of TetherLink. If the software does not work with your specific mobile carrier or PC configuration, you are eligible for a <strong>full 100% refund within 14 days of purchase</strong>. No questions asked. Simply contact our support team at <strong>wjddnjs21872@gmail.com</strong> with your Gumroad receipt or order email.</p>
+                <!-- 이메일 옥에 티 완벽 교체 완료 (tetherlink.dev@gmail.com) -->
+                <p>We stand behind the performance of TetherLink. If the software does not work with your specific mobile carrier or PC configuration, you are eligible for a <strong>full 100% refund within 14 days of purchase</strong>. No questions asked. Simply contact our support team at <strong>tetherlink.dev@gmail.com</strong> with your Gumroad receipt or order email.</p>
             </div>
 
             <div class="legal-box">
@@ -602,8 +771,24 @@
         </div>
     </footer>
 
-    <!-- GitHub 최신 릴리즈 자동 연동 스크립트 -->
+    <!-- GitHub 최신 릴리즈 자동 연동 및 쇼케이스 탭 스위처 스크립트 -->
     <script>
+    // 탭 스위처 함수
+    function switchTab(index) {
+        const tabs = document.querySelectorAll('.showcase-tab');
+        const items = document.querySelectorAll('.showcase-item');
+        tabs.forEach((tab, i) => {
+            if (i === index) {
+                tab.classList.add('active');
+                items[i].classList.add('active');
+            } else {
+                tab.classList.remove('active');
+                items[i].classList.remove('active');
+            }
+        });
+    }
+
+    // GitHub 최신 릴리즈 자동 페칭
     fetch('https://api.github.com/repos/TetherLink-dev/TetherLink/releases/latest')
       .then(res => res.json())
       .then(data => {
