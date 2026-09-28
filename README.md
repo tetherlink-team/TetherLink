@@ -50,8 +50,9 @@ High-speed, zero-leak USB tethering engine designed to bypass mobile carrier hot
 
 
 
+---
 
-   <img width="1338" height="409" alt="debian-linux-cli" src="https://github.com/user-attachments/assets/db0674d0-b149-46e0-8a55-e136f1653e87" />
-<img width="640" height="258" alt="parallel-downloads-213mb" src="https://github.com/user-attachments/assets/c6eec9cc-2f10-4893-823e-792864df6142" />
-<img width="586" height="254" alt="att-usage-95gb" src="https://github.com/user-attachments/assets/85476e8f-faa6-4d9d-9ada-6b4a6fc48e2c" />
+ <img width="1338" height="409" alt="debian-linux-cli" src="https://github.com/user-attachments/assets/ab94ba6d-a073-4ea0-98ea-757b1342b9d4" />
+<img width="640" height="258" alt="parallel-downloads-213mb" src="https://github.com/user-attachments/assets/a07acfe8-569a-442c-bc51-ff4cdbdedc42" />
+<img width="586" height="254" alt="att-usage-95gb" src="https://github.com/user-attachments/assets/c92d9baa-8aff-4eb1-9c4a-c98600141f1f" />
 
