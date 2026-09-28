@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/Status-Stable%20Release-orange?style=flat-square" alt="Status" />
 </p>
 
-High-speed, zero-leak USB tethering engine designed to bypass mobile carrier hotspot throttling and reduce latency for gaming and heavy workloads.
+A modern Wintun-based alternative to PdaNet & Tetrd. High-speed, zero-leak L3 USB tethering bridge designed to bypass carrier hotspot & tethering limits for RV setups, rural internet, and gaming.
 
 ---
 
@@ -26,7 +26,6 @@ High-speed, zero-leak USB tethering engine designed to bypass mobile carrier hot
 * **Multi-Stream Load Stability**: Sustained **213.34 MB/s** simultaneous parallel transfers without connection drops or throttling.
 
 ---
-
 ### 🪟 Windows Setup (GUI)
 
 > **Zero Complex Setup**: Standalone native client with embedded TUN driver and auto-routing.
