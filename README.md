@@ -1,53 +1,49 @@
 # TetherLink
 
-Direct Hardware-Level USB Packet Pipeline for Ultra-Low Latency Carrier Limit Bypass.
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Windows%2010%2F11%20%7C%20Linux-blue?style=flat-square" alt="Platform" />
+  <img src="https://img.shields.io/badge/Engine-v1.1.0-brightgreen?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/Status-Stable%20Release-orange?style=flat-square" alt="Status" />
+</p>
 
-TetherLink transforms your Android smartphone into a high-performance raw packet processing interface for Windows PC and Linux. Engineered from the ground up to eliminate bufferbloat, bypass carrier hotspot throttling, and deliver native gigabit-grade throughput without proxy overhead.
+High-speed, zero-leak USB tethering engine designed to bypass mobile carrier hotspot throttling and reduce latency for gaming and heavy workloads.
 
 ---
 
-### 🐧 Linux Quick Start
+### ⚡ Quick Start
+* 🚀 **[Download Latest Release (v1.1.0)](../../releases)** — Standalone binaries for Windows & Linux
+
+---
+
+### 📊 Verified Real-World Benchmarks
+
+<p align="center">
+  <img width="640" height="459" alt="TetherLink Gigabit Benchmark" src="https://github.com/user-attachments/assets/025140dc-516b-4da8-b035-f8027a516a49" />
+</p>
+
+* **Gigabit Line Speed & Low Latency**: Tested at **1,089.49 Mbps** download / **105.12 Mbps** upload with **23ms ping**.
+* **Zero Hotspot Metering**: Verified with **94.76 GB** of continuous heavy traffic (**0.00 GB** hotspot deducted on carrier account).
+* **Multi-Stream Load Stability**: Sustained **213.34 MB/s** simultaneous parallel transfers without connection drops or throttling.
+
+---
+
+### 🪟 Windows Setup (GUI)
+
+> **Zero Complex Setup**: Standalone native client with embedded TUN driver and auto-routing.
+
+1. Enable **USB Debugging** on your phone *(Keep system "USB Tethering" OFF)*.
+2. Connect USB cable, allow the prompt, and tap **Start** in the Android app.
+3. Launch `TetherLink.exe` and click **Connect TetherLink**.
+4. *(Optional)* Keep `Keep Phone Screen Awake` checked to prevent OS-level USB bus throttling.
+
+---
+
+### 🐧 Linux Setup (CLI)
 
 > **Zero Prerequisites**: Fully standalone bridging engine bundled. No external packages (`adb`) required.
 
-1. **Mobile Preparation**:
-   * Enable **USB Debugging** on your phone *(Keep "USB Tethering" OFF)*.
-   * Connect via USB, accept the *"Allow USB debugging"* prompt, and tap **Start** in the TetherLink mobile app.
-
-2. **Installation**:
-   * `chmod +x TetherLink_Installer.run`
-   * `sudo ./TetherLink_Installer.run`
-
-3. **Usage**:
-   * Start Service: `sudo tetherlink`
-   * Check Status: `sudo tetherlink --status`
-   * Clean Uninstall: `sudo tetherlink-uninstall`
-
----
-
-### Key Capabilities
-* **Kernel-Level Packet Exchange**: Direct Layer-3 network translation delivering zero-latency packet transmission for competitive gaming.
-* **Full UDP & Direct NAT Support**: Native compatibility with Steam downloads, Discord voice servers, and multiplayer matchmakers without traffic drops.
-* **Carrier Throttling Bypass**: Seamlessly handles high-throughput traffic at the hardware transport layer without triggering mobile hotspot detection buckets.
-* **Zero Thermal Throttling**: Low-power USB transport keeps your smartphone cool and charging, avoiding the battery degradation common with Wi-Fi proxies.
-* **Zero-Fragmentation Protocol**: Intelligent dynamic packet optimization prevents transmission stalls during peak bandwidth utilization.
-* **Zero Configuration**: Plug-and-play setup without requiring complex routing configurations.
-* **Doze-Mode Bypass**: Integrated screen-awake control in the desktop client to prevent Android from cutting USB bus throughput during sleep.
-* **Clean Process Lifecycle**: Automatic teardown hooks guarantee mobile background services terminate immediately when the PC client closes, ensuring zero battery drain.
-  
-### 🚀 Real-World Gaming Benchmark
-![TetherLink Steam Download Benchmark - 127.6 Mbps Sustained Peak](https://github.com/user-attachments/assets/ef241c5f-88dc-494f-b2b3-9bfea5260dfd)
-
-* **Test Environment**: Cellular LTE+ (4G LTE-A) connection via standard USB cable (no Wi-Fi).
-* **Sustained Throughput**: Maintained **121.6+ Mbps** (Peak: **127.6 Mbps**) without packet drops, completely saturating the local carrier band.
-* **5G / High-Bandwidth Ready**: C-native zero-copy pipeline capable of scaling seamlessly to 5G multi-hundred Mbps line rates.
-* **Zero Thermal Throttling**: Low-power hardware transport keeps the phone completely cool and charging throughout the entire 20GB+ download session.
-
-### Requirements
-
-* **PC:** 
-  * Windows 10 / 11 (64-bit)
-  * Linux (x86_64, systemd-based distributions)
-* **Mobile:** Android 8.0+ with USB Debugging enabled
-* **Hardware:** Standard USB data cable
-
+1. Enable **USB Debugging** on your phone *(Keep system "USB Tethering" OFF)*.
+2. Run installation:
+   ```bash
+   chmod +x TetherLink_Installer.run
+   sudo ./TetherLink_Installer.run
