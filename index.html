@@ -635,7 +635,7 @@
         </div>
     </section>
 
-    <!-- 4단 실측 증거 인터랙티브 탭 쇼케이스 섹션 -->
+    <!-- 4단 실측 증거 인터랙티브 탭 쇼케이스 섹션 (실제 에셋 URL 완벽 연결) -->
     <section class="showcase" id="benchmarks">
         <div class="container">
             <div class="section-header">
@@ -651,7 +651,7 @@
                     <button class="showcase-tab" onclick="switchTab(3)">🐧 Debian Linux CLI</button>
                 </div>
 
-                <!-- 1번 탭: 1,089 Mbps 스피드테스트 (URL 자동 삽입 완료) -->
+                <!-- 1번 탭: 1,089 Mbps 스피드테스트 -->
                 <div class="showcase-item active">
                     <div class="showcase-media">
                         <img src="https://github.com/user-attachments/assets/025140dc-516b-4da8-b035-f8027a516a49" alt="TetherLink 1,089 Mbps Speedtest Benchmark">
@@ -665,8 +665,7 @@
                 <!-- 2번 탭: AT&T 94.76 GB 무누수 -->
                 <div class="showcase-item">
                     <div class="showcase-media">
-                        <!-- 아래 src 안에 95GB 무누수 이미지 URL을 넣어주세요 -->
-                        <img src="여기에_2번_이미지_URL_붙여넣기" alt="Carrier 0.00 GB Hotspot Deduction Proof">
+                        <img src="https://github.com/user-attachments/assets/bf333957-33f6-45c2-8b63-96ca42e848d6" alt="Carrier 0.00 GB Hotspot Deduction Proof">
                     </div>
                     <div class="showcase-info">
                         <h4>94.76 GB Streamed with Exactly 0.00 GB Hotspot Deducted</h4>
@@ -677,8 +676,7 @@
                 <!-- 3번 탭: 5개 파일 동시 병렬 다운로드 (213 MB/s) -->
                 <div class="showcase-item">
                     <div class="showcase-media">
-                        <!-- 아래 src 안에 5개 병렬 다운로드 이미지 URL을 넣어주세요 -->
-                        <img src="여기에_3번_이미지_URL_붙여넣기" alt="5 Simultaneous Multi-Stream Transfers at 213 MB/s">
+                        <img src="https://github.com/user-attachments/assets/0c6a47b7-bb24-48c6-a914-e04fc7fdace9" alt="5 Simultaneous Multi-Stream Transfers at 213 MB/s">
                     </div>
                     <div class="showcase-info">
                         <h4>Sustained 213.34 MB/s Under Heavy Multi-Stream Load</h4>
@@ -689,8 +687,7 @@
                 <!-- 4번 탭: Debian Linux CLI -->
                 <div class="showcase-item">
                     <div class="showcase-media">
-                        <!-- 아래 src 안에 데비안 리눅스 이미지 URL을 넣어주세요 -->
-                        <img src="여기에_4번_이미지_URL_붙여넣기" alt="TetherLink Headless Linux CLI on Debian 13">
+                        <img src="https://github.com/user-attachments/assets/5eae1471-4d12-48c6-8a0f-26c5473e8f1d" alt="TetherLink Headless Linux CLI on Debian 13">
                     </div>
                     <div class="showcase-info">
                         <h4>Native Cross-Platform Engine for Linux Workstations</h4>
@@ -745,7 +742,7 @@
 
             <div class="legal-box">
                 <h3>14-Day Money-Back Guarantee (Refund Policy)</h3>
-                <!-- 이메일 옥에 티 완벽 교체 완료 (tetherlink.dev@gmail.com) -->
+                <!-- 공식 지원 이메일 교체 완료 -->
                 <p>We stand behind the performance of TetherLink. If the software does not work with your specific mobile carrier or PC configuration, you are eligible for a <strong>full 100% refund within 14 days of purchase</strong>. No questions asked. Simply contact our support team at <strong>tetherlink.dev@gmail.com</strong> with your Gumroad receipt or order email.</p>
             </div>
 
@@ -773,7 +770,6 @@
 
     <!-- GitHub 최신 릴리즈 자동 연동 및 쇼케이스 탭 스위처 스크립트 -->
     <script>
-    // 탭 스위처 함수
     function switchTab(index) {
         const tabs = document.querySelectorAll('.showcase-tab');
         const items = document.querySelectorAll('.showcase-item');
@@ -788,7 +784,6 @@
         });
     }
 
-    // GitHub 최신 릴리즈 자동 페칭
     fetch('https://api.github.com/repos/TetherLink-dev/TetherLink/releases/latest')
       .then(res => res.json())
       .then(data => {
