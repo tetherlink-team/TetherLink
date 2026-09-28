@@ -47,3 +47,11 @@ High-speed, zero-leak USB tethering engine designed to bypass mobile carrier hot
    ```bash
    chmod +x TetherLink_Installer.run
    sudo ./TetherLink_Installer.run
+
+
+
+
+   <img width="1338" height="409" alt="debian-linux-cli" src="https://github.com/user-attachments/assets/db0674d0-b149-46e0-8a55-e136f1653e87" />
+<img width="640" height="258" alt="parallel-downloads-213mb" src="https://github.com/user-attachments/assets/c6eec9cc-2f10-4893-823e-792864df6142" />
+<img width="586" height="254" alt="att-usage-95gb" src="https://github.com/user-attachments/assets/85476e8f-faa6-4d9d-9ada-6b4a6fc48e2c" />
+
