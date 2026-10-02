@@ -2,16 +2,15 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Windows%2010%2F11%20%7C%20Linux-blue?style=flat-square" alt="Platform" />
-  <img src="https://img.shields.io/badge/Engine-v1.1.0-brightgreen?style=flat-square" alt="Version" />
-  <img src="https://img.shields.io/badge/Status-Stable%20Release-orange?style=flat-square" alt="Status" />
+  <img src="https://img.shields.io/badge/Engine-v1.1.1-brightgreen?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/status-Stable%20Release-orange?style=flat-square" alt="Status" />
 </p>
 
-A modern Wintun-based alternative to PdaNet & Tetrd. High-speed, zero-leak L3 USB tethering bridge designed to bypass carrier hotspot & tethering limits for RV setups, rural internet, and gaming.
-
+A high-performance Wintun-based L3 USB network bridge engineered for ultra-low latency gaming, high-throughput data routing, and seamless mobile-to-PC connectivity.
 ---
 
 ### ⚡ Quick Start
-* 🚀 **[Download Latest Release (v1.1.0)](../../releases)** — Standalone binaries for Windows & Linux
+* 🚀 **[Download Latest Release (v1.1.1)](../../releases)** – Standalone packages for Windows, Android & Linux
 
 ---
 
@@ -30,9 +29,9 @@ A modern Wintun-based alternative to PdaNet & Tetrd. High-speed, zero-leak L3 US
 
 > **Zero Complex Setup**: Standalone native client with embedded TUN driver and auto-routing.
 
-1. Enable **USB Debugging** on your phone *(Keep system "USB Tethering" OFF)*.
-2. Connect USB cable, allow the prompt, and tap **Start** in the Android app.
-3. Launch `TetherLink.exe` and click **Connect TetherLink**.
+1. Install `TetherLink_Mobile_v1.1.1.apk` on your phone and enable **USB Debugging** *(Keep system "USB Tethering" OFF)*.
+2. Connect USB cable, allow the prompt, and tap **Start** in the mobile app.
+3. Launch `TetherLink.exe` (or run installer) and click **Connect TetherLink Bridge**.
 4. *(Optional)* Keep `Keep Phone Screen Awake` checked to prevent OS-level USB bus throttling.
 
 ---
