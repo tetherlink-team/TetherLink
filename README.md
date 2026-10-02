@@ -10,7 +10,7 @@ A high-performance Wintun-based L3 USB network bridge engineered for ultra-low l
 ---
 
 ### ⚡ Quick Start
-* 🚀 **[Download Latest Release (v1.1.1)](../../releases)** – Standalone packages for Windows, Android & Linux
+* 🚀 **[Download Latest Release (v1.1.1)](../../releases)** – Standalone packages for Windows & Android (Linux v1.1.0 CLI included)
 
 ---
 
