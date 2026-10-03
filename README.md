@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Windows%2010%2F11%20%7C%20Linux-blue?style=flat-square" alt="Platform" />
-  <img src="https://img.shields.io/badge/Engine-v1.1.1-brightgreen?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/Engine-v1.1.2-brightgreen?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/status-Stable%20Release-orange?style=flat-square" alt="Status" />
 </p>
 
@@ -10,7 +10,7 @@ A high-performance Wintun-based L3 USB network bridge engineered for ultra-low l
 ---
 
 ### ⚡ Quick Start
-* 🚀 **[Download Latest Release (v1.1.1)](../../releases)** - Standalone packages for Windows, Linux & Android
+* 🚀 **[Download Latest Release (v1.1.2)](../../releases)** - Standalone packages for Windows, Linux & Android
 
 ---
 
