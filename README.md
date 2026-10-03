@@ -10,7 +10,7 @@ A high-performance Wintun-based L3 USB network bridge engineered for ultra-low l
 ---
 
 ### ⚡ Quick Start
-* 🚀 **[Download Latest Release (v1.1.1)](../../releases)** – Standalone packages for Windows & Android (Linux v1.1.0 CLI included)
+* 🚀 **[Download Latest Release (v1.1.1)](../../releases)** - Standalone packages for Windows, Linux & Android
 
 ---
 
@@ -42,6 +42,12 @@ A high-performance Wintun-based L3 USB network bridge engineered for ultra-low l
 
 1. Enable **USB Debugging** on your phone *(Keep system "USB Tethering" OFF)*.
 2. Run installation:
-   ```bash
-   chmod +x TetherLink_Installer.run
-   sudo ./TetherLink_Installer.run
+```bash
+chmod +x TetherLink_Installer.run
+sudo ./TetherLink_Installer.run
+```
+3. Launch TetherLink:
+```bash
+sudo tetherlink
+```
+*(To activate Pro: `sudo tetherlink --key "YOUR_KEY"` | To uninstall: `sudo /opt/tetherlink/uninstall.sh`)*
