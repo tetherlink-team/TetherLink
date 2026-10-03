@@ -50,4 +50,4 @@ sudo ./TetherLink_Installer.run
 ```bash
 sudo tetherlink
 ```
-*(To activate Pro: `sudo tetherlink --key "YOUR_KEY"` | To uninstall: `sudo /opt/tetherlink/uninstall.sh`)*
+*(To uninstall: `sudo /opt/tetherlink/uninstall.sh`)*
