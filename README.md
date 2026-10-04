@@ -23,7 +23,6 @@ A high-performance Wintun-based L3 USB network bridge engineered for ultra-low l
 * **Gigabit Line Speed & Low Latency**: Tested at **1,089.49 Mbps** download / **105.12 Mbps** upload with **23ms ping**.
 * **Zero Hotspot Metering**: Verified with **94.76 GB** of continuous heavy traffic (**0.00 GB** hotspot deducted on carrier account).
 * **Multi-Stream Load Stability**: Sustained **213.34 MB/s** simultaneous parallel transfers without connection drops or throttling.
-* **Multi-Stream Load Stability**: Sustained **213.34 MB/s** simultaneous parallel transfers without connection drops or throttling.
 
 ---
 
