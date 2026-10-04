@@ -437,7 +437,7 @@
             font-size: 3rem;
             font-weight: 800;
             color: var(--accent-green);
-            margin: 16px 0 10px 0;
+            margin: 16px 0 20px 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -550,12 +550,13 @@
 </head>
 <body>
 
-    <!-- 론칭 프로모션 공지 배너 -->
+    <!-- 론칭 프로모션 공지 배너 (프로모션 종료로 주석 처리)
     <div class="promo-banner">
         <a href="https://2243482669641.gumroad.com/l/tetherlink-pro" target="_blank" rel="noopener noreferrer">
             🚀 <strong class="accent">Launch Special:</strong> Save <strong class="highlight">33% OFF</strong> Lifetime Pro (Discount automatically applied at checkout)
         </a>
     </div>
+    -->
 
     <nav>
         <div class="container nav-content">
@@ -569,7 +570,7 @@
                 <a href="#download" class="nav-link">Download</a>
                 <a href="#pricing" class="nav-link">Pricing</a>
                 <a href="#legal" class="nav-link">Refund &amp; Terms</a>
-                <a href="https://2243482669641.gumroad.com/l/tetherlink-pro" target="_blank" class="btn-nav">Get Pro (33% OFF)</a>
+                <a href="https://2243482669641.gumroad.com/l/tetherlink-pro" target="_blank" class="btn-nav">Get Pro</a>
             </div>
         </div>
     </nav>
@@ -580,18 +581,17 @@
             <h1 class="hero-title">TetherLink: Unlimited PC Tethering to <span>Bypass Hotspot Limits</span></h1>
             <p class="hero-desc">Bypass carrier hotspot caps and eliminate proxy-induced bufferbloat. Transform your Android smartphone into a high-performance raw packet interface for Windows PC &amp; Linux.</p>
 
-                  <div class="hero-cta" id="download">
-        <a id="btn-download-win" href="https://github.com/tetherlink-team/TetherLink/releases/latest/download/TetherLink_Setup_v1.1.2.zip" class="btn-primary">
-          <span>⬇ Download 48-Hour Free Trial (Windows .zip)</span>
-        </a>
-        <a id="btn-download-linux" href="https://github.com/tetherlink-team/TetherLink/releases/latest/download/TetherLink_Installer.run" class="btn-secondary">
-          <span>🐧 Download Linux CLI (.run)</span>
-        </a>
-        <a id="btn-download-apk" href="https://github.com/tetherlink-team/TetherLink/releases/latest/download/TetherLink_Mobile_v1.1.1.apk" class="btn-secondary">
-          <span>📱 Download Android APK</span>
-        </a>
-      </div>
-
+            <div class="hero-cta" id="download">
+                <a id="btn-download-win" href="https://github.com/tetherlink-team/TetherLink/releases/latest/download/TetherLink_Setup_v1.1.2.zip" class="btn-primary">
+                    <span>⬇ Download 48-Hour Free Trial (Windows .zip)</span>
+                </a>
+                <a id="btn-download-linux" href="https://github.com/tetherlink-team/TetherLink/releases/latest/download/TetherLink_Installer.run" class="btn-secondary">
+                    <span>🐧 Download Linux CLI (.run)</span>
+                </a>
+                <a id="btn-download-apk" href="https://github.com/tetherlink-team/TetherLink/releases/latest/download/TetherLink_Mobile_v1.1.1.apk" class="btn-secondary">
+                    <span>📱 Download Android APK</span>
+                </a>
+            </div>
 
             <!-- VirusTotal 클린 인증 배지 -->
             <div style="margin-top: 16px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.85rem; color: #94A3B8;">
@@ -636,13 +636,13 @@
         </div>
     </section>
 
-<!-- 4단 실측 증거 인터랙티브 탭 쇼케이스 섹션 -->
-<section class="showcase" id="benchmarks">
-  <div class="container">
-    <div class="section-header">
-      <h2>Verified Real-World Benchmarks &amp; Proof</h2>
-      <p>Independently tested and verified by Reddit beta tester <strong>u/keeepinitgansta</strong>: zero hotspot deduction, 1+ Gbps sustained line rate, and zero bufferbloat.</p>
-    </div>
+    <!-- 4단 실측 증거 인터랙티브 탭 쇼케이스 섹션 -->
+    <section class="showcase" id="benchmarks">
+        <div class="container">
+            <div class="section-header">
+                <h2>Verified Real-World Benchmarks &amp; Proof</h2>
+                <p>Independently tested and verified by Reddit beta tester <strong>u/keeepinitgansta</strong>: zero hotspot deduction, 1+ Gbps sustained line rate, and zero bufferbloat.</p>
+            </div>
 
             <div class="showcase-container">
                 <div class="showcase-tabs">
@@ -709,11 +709,7 @@
             <div class="pricing-card">
                 <div class="pricing-title">Lifetime Pro License</div>
                 <div class="pricing-price">
-                    <span class="original-price">$14.99</span>
-                    $10.04 <span class="period">/ one-time</span>
-                </div>
-                <div>
-                    <span class="discount-tag">⚡ 33% LAUNCH DISCOUNT APPLIED</span>
+                    $14.99 <span class="period">/ one-time</span>
                 </div>
                 <ul class="pricing-list">
                     <li>✔ <strong>Unlimited Lifetime Usage</strong> (All future updates)</li>
@@ -723,7 +719,7 @@
                     <li>✔ <strong>14-Day Money-Back Guarantee</strong></li>
                 </ul>
                 <a href="https://2243482669641.gumroad.com/l/tetherlink-pro" target="_blank" class="btn-primary" style="width: 100%; justify-content: center;">
-                    Unlock Lifetime Pro (33% OFF)
+                    Unlock Lifetime Pro
                 </a>
             </div>
 
@@ -743,7 +739,6 @@
 
             <div class="legal-box">
                 <h3>14-Day Money-Back Guarantee (Refund Policy)</h3>
-                <!-- 공식 지원 이메일 교체 완료 -->
                 <p>We stand behind the performance of TetherLink. If the software does not work with your specific mobile carrier or PC configuration, you are eligible for a <strong>full 100% refund within 14 days of purchase</strong>. No questions asked. Simply contact our support team at <strong>tetherlink.dev@gmail.com</strong> with your Gumroad receipt or order email.</p>
             </div>
 
