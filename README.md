@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-Windows%2010%2F11%20%7C%20Linux-blue?style=flat-square" alt="Platform" />
-  <img src="https://img.shields.io/badge/Mobile-Android%2010%2B%20(No%20Root)-brightgreen?style=flat-square" alt="Mobile" />
+  <img src="https://img.shields.io/badge/Mobile-Android%208%2B%20(No%20Root)-brightgreen?style=flat-square" alt="Mobile" />
   <img src="https://img.shields.io/badge/Engine-v1.1.2-blueviolet?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/status-Stable%20Release-orange?style=flat-square" alt="Status" />
 </p>
