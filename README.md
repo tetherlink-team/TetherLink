@@ -43,7 +43,7 @@ A high-performance Wintun-based L3 USB tethering bridge engineered for unthrottl
 1. Install `TetherLink_Mobile_v1.1.1.apk` on your phone and enable **USB Debugging** *(Keep system "USB Tethering" OFF)*.
 2. Connect USB cable, allow the prompt, and tap **Start** in the mobile app.
 3. Launch `TetherLink.exe` (or run installer) and click **Connect TetherLink Bridge**.
-4. *(Optional)* Keep `Keep Phone Screen Awake` checked to prevent OS-level USB bus throttling.
+4. (Optional) In the desktop client, keep **"Keep Phone Screen Awake (Prevents Throttling)"** checked to prevent OS-level USB bus sleep.
 
 ---
 
@@ -51,7 +51,7 @@ A high-performance Wintun-based L3 USB tethering bridge engineered for unthrottl
 
 > **Zero Prerequisites**: Fully standalone bridging engine bundled. No external packages (`adb`) required.
 
-1. Enable **USB Debugging** on your phone *(Keep system "USB Tethering" OFF)*.
+1. Install TetherLink_Mobile_v1.1.1.apk on your phone and enable USB Debugging (Keep system "USB Tethering" OFF).
 2. Run installation:
 ```bash
 chmod +x TetherLink_Installer.run
