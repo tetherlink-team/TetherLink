@@ -23,8 +23,19 @@ A high-performance Wintun-based L3 USB network bridge engineered for ultra-low l
 * **Gigabit Line Speed & Low Latency**: Tested at **1,089.49 Mbps** download / **105.12 Mbps** upload with **23ms ping**.
 * **Zero Hotspot Metering**: Verified with **94.76 GB** of continuous heavy traffic (**0.00 GB** hotspot deducted on carrier account).
 * **Multi-Stream Load Stability**: Sustained **213.34 MB/s** simultaneous parallel transfers without connection drops or throttling.
+* **Multi-Stream Load Stability**: Sustained **213.34 MB/s** simultaneous parallel transfers without connection drops or throttling.
 
 ---
+
+### 🌐 Confirmed Carrier Bypass
+
+* **United States**: Verizon, AT&T, T-Mobile
+* **France**: Bouygues Telecom
+* **South Korea, India & Philippines**: Confirmed on major regional carriers
+* **Rwanda**: Verified on local cellular network
+
+---
+
 ### 🪟 Windows Setup (GUI)
 
 > **Zero Complex Setup**: Standalone native client with embedded TUN driver and auto-routing.
