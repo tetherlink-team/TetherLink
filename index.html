@@ -246,6 +246,18 @@
             border-color: #3B465E;
         }
 
+        .apk-badge {
+            background: rgba(0, 255, 102, 0.12);
+            color: var(--accent-green);
+            border: 1px solid rgba(0, 255, 102, 0.3);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+            letter-spacing: 0.2px;
+            margin-left: 4px;
+        }
+
         /* Features */
         .features {
             padding: 80px 0;
@@ -404,6 +416,76 @@
             color: var(--text-muted);
             font-size: 0.9rem;
             line-height: 1.5;
+        }
+
+        /* 통신사 검증 완료 카드 그리드 */
+        .carrier-proof {
+            max-width: 960px;
+            margin: 28px auto 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 22px 24px;
+        }
+
+        .carrier-proof-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .carrier-proof-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .carrier-proof-subtitle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .carrier-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 12px;
+        }
+
+        .carrier-card {
+            background: #0E121B;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .carrier-card:hover {
+            border-color: var(--border-highlight);
+            transform: translateY(-2px);
+        }
+
+        .carrier-region {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+        }
+
+        .carrier-names {
+            font-size: 0.85rem;
+            color: #E2E8F0;
+            font-weight: 500;
+            line-height: 1.4;
         }
 
         @keyframes fadeIn {
@@ -589,7 +671,7 @@
                     <span>🐧 Download Linux CLI (.run)</span>
                 </a>
                 <a id="btn-download-apk" href="https://github.com/tetherlink-team/TetherLink/releases/latest/download/TetherLink_Mobile_v1.1.1.apk" class="btn-secondary">
-                    <span>📱 Download Android APK</span>
+                    <span>📱 Download Android APK <span class="apk-badge">Android 8+ · No Root</span></span>
                 </a>
             </div>
 
@@ -696,6 +778,35 @@
                     </div>
                 </div>
             </div>
+
+            <!-- 글로벌 통신사 우회 검증 카드 그리드 -->
+            <div class="carrier-proof">
+                <div class="carrier-proof-header">
+                    <div class="carrier-proof-title">
+                        <span>🌐 Confirmed Carrier Bypass</span>
+                    </div>
+                    <span class="carrier-proof-subtitle">Verified raw L3 zero-quota packet routing</span>
+                </div>
+                <div class="carrier-grid">
+                    <div class="carrier-card">
+                        <span class="carrier-region">🇺🇸 United States</span>
+                        <span class="carrier-names">Verizon, AT&amp;T, T-Mobile</span>
+                    </div>
+                    <div class="carrier-card">
+                        <span class="carrier-region">🇫🇷 France</span>
+                        <span class="carrier-names">Bouygues Telecom</span>
+                    </div>
+                    <div class="carrier-card">
+                        <span class="carrier-region">🌏 South Korea, India &amp; Philippines</span>
+                        <span class="carrier-names">Major Regional Carriers</span>
+                    </div>
+                    <div class="carrier-card">
+                        <span class="carrier-region">🌍 Rwanda</span>
+                        <span class="carrier-names">Verified Local Cellular</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -738,7 +849,7 @@
             </div>
 
             <div class="legal-box">
-                <h3>14-Day Money-Back Guarantee (Refund Policy)</h3>
+                <h3 style="color: var(--accent-green);">14-Day Money-Back Guarantee (Refund Policy)</h3>
                 <p>We stand behind the performance of TetherLink. If the software does not work with your specific mobile carrier or PC configuration, you are eligible for a <strong>full 100% refund within 14 days of purchase</strong>. No questions asked. Simply contact our support team at <strong>tetherlink.dev@gmail.com</strong> with your Gumroad receipt or order email.</p>
             </div>
 
