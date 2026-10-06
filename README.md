@@ -65,6 +65,7 @@ sudo ./TetherLink_Installer.run
 sudo tetherlink
 ```
 *(To uninstall: `sudo /opt/tetherlink/uninstall.sh`)*
+
 ---
 
 ### 💡 Troubleshooting & Device Tips
