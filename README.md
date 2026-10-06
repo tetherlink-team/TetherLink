@@ -65,3 +65,14 @@ sudo ./TetherLink_Installer.run
 sudo tetherlink
 ```
 *(To uninstall: `sudo /opt/tetherlink/uninstall.sh`)*
+---
+
+### 💡 Troubleshooting & Device Tips
+
+* **OnePlus / Oppo / Realme (OxygenOS / ColorOS):**
+  If throughput fluctuates or drops to kb/s, OnePlus aggressively throttles background network sockets.
+  * Go to `Settings` → `Battery` → `Battery Optimization` (or `App Battery Management`).
+  * Find **TetherLink** and set it to **"Don't optimize"** (Allow background activity).
+
+* **Carrier 5G Tower Stability (T-Mobile / Verizon):**
+  If speeds fluctuate wildly in low-band 5G areas (n71/n5), temporarily switching the phone's network mode to **"LTE/4G only"** can lock in stable latency and prevent carrier tower hopping.
