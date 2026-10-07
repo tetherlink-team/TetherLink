@@ -14,7 +14,7 @@ A high-performance Wintun-based L3 USB tethering bridge engineered for unthrottl
 
 ### ⚡ Quick Start
 * 🌐 **[Official Website & Documentation](https://tetherlink-team.github.io/TetherLink/)** - Features, detailed guides & community
-* 🚀 **[Download Latest Release (v1.1.3)](../../releases)** - Standalone packages for Windows, Linux & Android
+* 🚀 **[Download Latest Release (v1.1.4)](../../releases)** - Standalone packages for Windows, Linux & Android
 
 ---
 
