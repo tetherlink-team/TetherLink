@@ -23,12 +23,13 @@ A high-performance Wintun-based L3 USB tethering bridge engineered for unthrottl
 https://github.com/user-attachments/assets/f5df4a79-ec05-4083-928a-0e9e0e1933b9
 
 <p align="center">
-  <img width="640" height="459" alt="TetherLink Gigabit Benchmark" src="https://github.com/user-attachments/assets/025140dc-516b-4da8-b035-f8027a516a49" />
+  <img width="586" height="254" alt="att-usage-95gb" src="https://github.com/user-attachments/assets/78a62367-c5e9-40aa-95c1-3a87435f3f9f" />
 </p>
 
 * **Gigabit Line Speed & Low Latency**: Tested at **1,145.48 Mbps** download / **106.45 Mbps** upload with **26ms ping**.
 * **Zero Hotspot Metering**: Verified with **94.76 GB** of continuous heavy traffic (**0.00 GB** hotspot deducted on carrier account).
 * **Multi-Stream Load Stability**: Sustained **257.78 MB/s** simultaneous parallel transfers without connection drops or throttling.
+
 ---
 
 ### 🌐 Confirmed Carrier Bypass
