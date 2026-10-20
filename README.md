@@ -62,9 +62,17 @@ https://github.com/user-attachments/assets/f5df4a79-ec05-4083-928a-0e9e0e1933b9
 chmod +x TetherLink_Installer.run
 sudo ./TetherLink_Installer.run
 ```
-3. Launch TetherLink:
+3. Launch & manage TetherLink:
+
 ```bash
+# Run the tunnel daemon
 sudo tetherlink
+
+# Check trial or license status
+sudo tetherlink --status
+
+# Activate Lifetime Pro
+sudo tetherlink --key YOUR_LICENSE_KEY
 ```
 *(To uninstall: `sudo /opt/tetherlink/uninstall.sh`)*
 
