@@ -4,7 +4,7 @@
   <a href="https://tetherlink-team.github.io/TetherLink/"><img src="https://img.shields.io/badge/Website-Official%20Site-00FF66?style=flat-square&logo=googlechrome&logoColor=black" alt="Official Website" /></a>
   <img src="https://img.shields.io/badge/Platform-windows%2010%2F11%20%7C%20Linux-blue?style=flat-square" alt="Platform" />
   <img src="https://img.shields.io/badge/Mobile-Android%208%2B%20(No%20Root)-brightgreen?style=flat-square" alt="Mobile" />
-  <img src="https://img.shields.io/badge/Engine-v1.2.2-blueviolet?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/Engine-v1.2.3-blueviolet?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/status-Stable%20Release-orange?style=flat-square" alt="status" />
 </p>
 
@@ -14,7 +14,7 @@ A high-performance Wintun-based L3 USB tethering bridge engineered for unthrottl
 
 ### ⚡ Quick Start
 * 🌐 **[Official Website & Documentation](https://tetherlink-team.github.io/TetherLink/)** - Features, detailed guides & community
-* 🚀 **[Download Latest Release (v1.2.2)](../../releases)** - Standalone packages for Windows, Linux & Android
+* 🚀 **[Download Latest Release (v1.2.3)](../../releases)** - Standalone packages for Windows, Linux & Android
 
 ---
 
